@@ -35,5 +35,4 @@ public class Leetcode1 {
       System.out.printf("%d, ", one);
     }
   }
-
 }
