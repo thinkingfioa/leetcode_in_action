@@ -1,5 +1,6 @@
 package com.thinking.easy;
 
+import com.thinking.ConsoleOutput;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,9 +31,6 @@ public class Leetcode1 {
     Leetcode1 leetcode1 = new Leetcode1();
     int[] nums = {2, 7, 11, 15};
     int target = 9;
-    int[] result = leetcode1.twoSum(nums, target);
-    for (int one : result) {
-      System.out.printf("%d, ", one);
-    }
+    ConsoleOutput.printf(leetcode1.twoSum(nums, target));
   }
 }
