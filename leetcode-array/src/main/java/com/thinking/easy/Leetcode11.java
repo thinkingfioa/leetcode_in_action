@@ -5,7 +5,7 @@ package com.thinking.easy;
  *
  * dp[i][j]=max(dp[i+1][j-1], dp[i+1][j], dp[i][-1], len * min(height[i],[j])
  *
- * AC方法 请参考Go项目
+ * AC方法 请参考Go项目. 双指针移动，请思考移动条件：值小的移动指针，能保证结果正确性吗?
  *
  * <pre>
  *  https://github.com/thinkingfioa/go-learning/tree/master/leetcode-in-action/src/leetcode-array
