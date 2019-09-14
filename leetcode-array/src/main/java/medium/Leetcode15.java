@@ -1,4 +1,4 @@
-package com.thinking.easy;
+package medium;
 
 import com.thinking.ConsoleOutput;
 import java.util.ArrayList;
@@ -6,6 +6,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * 三个数求和，值为0, eg: num1 + num2 + num3 = 0. 采用通用方法: 使用双指针，找-num1 = num2+num3 的数字
+ *
  * @author thinking_fioa 04/09/2019
  */
 public class Leetcode15 {

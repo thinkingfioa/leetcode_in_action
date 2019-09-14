@@ -1,6 +1,8 @@
-package com.thinking.easy;
+package medium;
 
 /**
+ * 三个数求和，最接近target数值. 采用通用方法: 定位第一个数字，使用双指针找后两个.
+ *
  * 参考Go语言项目.
  *
  * <pre>

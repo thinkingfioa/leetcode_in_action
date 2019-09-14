@@ -1,4 +1,4 @@
-package com.thinking.easy;
+package medium;
 
 /**
  * * 参考Go语言项目.

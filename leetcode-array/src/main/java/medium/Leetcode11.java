@@ -1,4 +1,4 @@
-package com.thinking.easy;
+package medium;
 
 /**
  * 利用动归方程，可以内存超出.
