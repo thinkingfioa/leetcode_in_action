@@ -11,13 +11,13 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 1. 第一种：初步思路，递归肯定能做. 但可能会超时. 该题目没有超时，可参考Go语言递归做法
+ * 1. 第一种：初步思路，递归肯定能做. 但可能会超时. 该题目没有超时，且性能超过85%，可参考Go语言递归做法
  *
  * <pre>
  *   https://github.com/thinkingfioa/go-learning/tree/master/leetcode-in-action/src/leetcode-array
  * </pre>
  *
- * 2. 第二种：利用数组，分别计算[1, target]中的数字
+ * 2. 第二种：利用数组，分别计算[1, target]中的数字，性能不好
  *
  * @author thinking_fioa 11/09/2019
  */
