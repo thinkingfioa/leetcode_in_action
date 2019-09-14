@@ -11,6 +11,8 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+ * 给定数组{2, 3, 6, 7} and target = 8，寻找所有相加结果.
+ *
  * 1. 第一种：初步思路，递归肯定能做. 但可能会超时. 该题目没有超时，且性能超过85%，可参考Go语言递归做法
  *
  * <pre>
