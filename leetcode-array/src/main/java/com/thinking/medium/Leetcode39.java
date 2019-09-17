@@ -1,4 +1,4 @@
-package medium;
+package com.thinking.medium;
 
 import com.thinking.ConsoleOutput;
 import java.util.ArrayList;

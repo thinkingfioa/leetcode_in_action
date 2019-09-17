@@ -1,4 +1,4 @@
-package medium;
+package com.thinking.medium;
 
 /**
  * * 参考Go语言项目.
