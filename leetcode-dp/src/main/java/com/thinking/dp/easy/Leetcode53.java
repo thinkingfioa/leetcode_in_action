@@ -5,12 +5,12 @@ package com.thinking.dp.easy;
  *
  * 第一种方法：动态规划。
  * <pre>
- *   1. 如果定义dp[i][len]表示nums[i，i+len-1]区间最大子序列和，会内存移除.
+ *   1. 如果定义dp[i][len]表示nums[i，i+len-1]区间最大子序列和，会内存溢出.
  *   2. 定义dp[i]表示，以nums[i]结尾，最大的子序列和. dp[i]= dp[i-1]>0?dp[i-1]+nums[i]:nums[i]
  * </pre>
  *
  *
- * 第二种方法：分而治之. 可参考Go语言分而治之做法
+ * 第二种方法：分而治之. 可参考Go语言分而治之做法. left - mid - right
  *
  * <pre>
  *   https://github.com/thinkingfioa/go-learning/tree/master/leetcode-in-action/src/leetcode-array
