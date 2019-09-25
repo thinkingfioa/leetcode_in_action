@@ -12,6 +12,7 @@
   <modules>
     <module>leetcode-common</module>
     <module>leetcode-dp</module>
+    <module>leetcode-binary-search</module>
   </modules>
   <dependencies>
     <dependency>

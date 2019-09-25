@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * {@link Leetcode39}变现题. 区别：候选次数只能使用一次.
+ * {@link Leetcode39}变形题. 区别：候选次数只能使用一次.
  *
  * @author thinking_fioa 14/09/2019
  */
