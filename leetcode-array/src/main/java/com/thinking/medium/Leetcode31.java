@@ -5,7 +5,7 @@ package com.thinking.medium;
  *
  * 思路: 从右往左找num1, num2(num1 < num2)递减点，则是排列分割点. 从后面点中找到替代的位置，交换。在排序即可
  *
- * * 参考Go语言项目.
+ * 参考Go语言项目.
  *
  * <pre>
  *  https://github.com/thinkingfioa/go-learning/tree/master/leetcode-in-action/src/leetcode-array
