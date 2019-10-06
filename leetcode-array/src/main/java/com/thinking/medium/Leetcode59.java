@@ -5,7 +5,7 @@ package com.thinking.medium;
  *
  * Spiral Matrix I题目是: Leetcode54
  *
- * 给定一个正整数n，生成一个蜘蛛的举证
+ * 给定一个正整数n，生成一个蜘蛛的矩阵
  *
  * 思路：整体思路与Leetcode54一样。分四个方向，轮询
  *
