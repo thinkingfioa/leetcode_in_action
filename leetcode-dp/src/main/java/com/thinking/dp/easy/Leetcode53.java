@@ -20,6 +20,9 @@ package com.thinking.dp.easy;
  */
 public class Leetcode53 {
 
+  /**
+   * dp[i]= dp[i-1]>0? dp[i-1]+nums[i]: nums[i]
+   */
   public int maxSubArray(int[] nums) {
     int last = nums[0];
     int maxResult = nums[0];
