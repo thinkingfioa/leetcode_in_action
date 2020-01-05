@@ -7,6 +7,8 @@ package com.thinking.medium;
  *
  * 思路: 类似题型，基本都是二分法，如果 nums[mid] < nums[right]， 则最小值在[left, mid]之间， 否则[mid+1, right]
  *
+ * 思路2: 一次for循环遍历，最小值一定比左边的小，右边的大。
+ *
  * 类似题型: Leetcode33
  *
  * 参考Go语言项目.
