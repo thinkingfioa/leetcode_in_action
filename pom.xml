@@ -10,6 +10,7 @@
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
+    <module>leetcode-array</module>
     <module>leetcode-common</module>
     <module>leetcode-dp</module>
     <module>leetcode-binary-search</module>
