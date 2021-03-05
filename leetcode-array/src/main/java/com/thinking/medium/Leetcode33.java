@@ -7,6 +7,8 @@ package com.thinking.medium;
  *
  * 思路: 二分查找, [left, mid, right]必有一个是顺序的，来判断下次二分位置。nums[left] < nums[mid]则左边是有序的
  *
+ * 类似题型: Leetcode153
+ *
  * 参考Go语言项目.
  *
  * <pre>
