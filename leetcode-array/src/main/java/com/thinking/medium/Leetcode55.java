@@ -2,14 +2,18 @@ package com.thinking.medium;
 
 /**
  * Title: Jump Game
- *
+ * <p>
  * 给定一个数组nums=[2,3,1,1,4]，每个位置的具体数值代表基于当前位置所能走的最大步数. 问：能否走到数组末尾位置?
- *
+ * <p>
  * eg: nums=[2,3,1,1,4], 在nums[0]的位置走一步，然后在nums[1]的位置走三步，到达数组末尾
- *
- * 思路: 能否到数组末尾，走的最远距离maxD能否大于数组长度。他们其实是一一映射的，for循环，条件是i<maxD，maxD在遍历过程中会更新
- *
+ * <p>
+ * 思路: 每个点的位置i，都有一个能走的最远距离，我们从i开始，一直尝试往前走，如果发现有更远的距离就更新maxD，走的过程中发现maxD可以到数组尾部，说明能到
+ * <p>
+ * 如果把[i, maxD]所有下标都走完，发现还没到尾部，那么就是到不了了
+ * <p>
  * 参考Go语言项目.
+ * <p>
+ * 类似题型: Jump Game II
  *
  * <pre>
  *  https://github.com/thinkingfioa/go-learning/tree/master/leetcode-in-action/src/leetcode-array
