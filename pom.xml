@@ -16,6 +16,7 @@
     <module>leetcode-binary-search</module>
     <module>leetcode-tree</module>
     <module>leetcode-string</module>
+    <module>leetcode-two-pointers</module>
   </modules>
 
   <name>leetcode-in-action</name>
