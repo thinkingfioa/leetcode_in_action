@@ -6,7 +6,13 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * 三个数求和，值为0, eg: num1 + num2 + num3 = 0. 采用通用方法: 使用双指针，找-num1 = num2+num3 的数字
+ * Title: 3Sum
+ * <p>
+ * 题目: 给一串数组nums，从数组中找出三个数组a、b和c，使得a+b+c=0，并将找到的多个结果输出。注意：找到的多个结果中不能有重复的结果
+ * <p>
+ * 思路: 三个数求和，值为0, eg: num1 + num2 + num3 = 0. 采用通用方法: 使用双指针，找-num1 = num2+num3 的数字
+ * <p>
+ * 类似题型: 4Sum
  *
  * @author thinking_fioa 04/09/2019
  */
