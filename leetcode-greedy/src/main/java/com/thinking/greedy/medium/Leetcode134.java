@@ -9,7 +9,13 @@ import com.thinking.ConsoleOutput;
  * <p>
  * 需要花费的汽油数。寻找满足条件的i站点，使得从i站点触发，能走一圈回到i站点。如果找不到返回-1
  * <p>
- * 思路:
+ * 思路: 对于第i个站点，定义surplusArray[i]=gas[i]+cost[i]，surplusArray[i]>0表示通过第i个能增加汽油数，
+ * <p>
+ * surplusArray[i]<=0表示通过第i个将减少汽油数。
+ * <p>
+ * 第一：先把不能走一圈的排除了。如果数组surplusArray求和小于0，说明找不到。
+ * <p>
+ * 第二：如果一定能走一圈，那么题目转化为寻找i站点，从i站点开始，到数组surplusArray数组尾部，求和大于等于0。
  * <p>
  * 类似题型: Employee Free Time
  * <p>
