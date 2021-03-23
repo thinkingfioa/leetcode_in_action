@@ -12,7 +12,9 @@ import java.util.Set;
  * <p>
  * 题目: 给定一个数字数组nums和一个target。从数组nums中找到a、b、c和d，使得a+b+c+d=target。要求将所有找到的结果输出，并且结果不能重复
  * <p>
- * 思路:
+ * 思路: 需要找四个数，我们只能分而治之，先定位a、d两个数，然后剩余的中间部分采用Two Pointer方法来寻找b+c=target-a-d。
+ * <p>
+ * 定位a、d两个数没有其他方式，只能遍历寻找，否则会遗漏。剩余中间部分b、c两个数，可以使用Two Pointer方法来定位
  * <p>
  * 类似题型: 3Sum
  * <p>
