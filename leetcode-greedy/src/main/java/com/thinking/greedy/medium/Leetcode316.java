@@ -11,10 +11,17 @@ import java.util.concurrent.LinkedBlockingDeque;
 /**
  * Title: Remove Duplicate Letters
  * <p>
- * 题目:
+ * 题目: 给一个字符串s，将字符串中重复字母去掉，并保证去掉重复字母后剩余的字符串是原串的最小字母序。
  * <p>
- * 思路：
+ * 字符串s中每个字符都是符合小写字母
  * <p>
+ * 思路：去除重复字母不复杂，复杂的是要求去除重复的字母后，得到最小字母序的串。假定你当前遍历到s[i]的字母，
+ * <pre>
+ * s[i]字母是否会在结果串中呢？如果符合下面两个条件，则可以添加
+ *    1. s[i]字母没有重复的字母了
+ *    2. s[i]字母将结果串result从i-1开始依次往前找，如果发现result[i-1]>=s[i] && 原串后面中还有result[i-1]字母，
+ *       则可以将结果中result[i-1]去除，再看result[i-2]字母。明显这个是一个典型的栈操作。
+ * <／pre>
  * 类似题型: Mini Parser
  * <p>
  * Minimum Remove to Make Valid Parentheses
