@@ -9,9 +9,9 @@ import java.util.concurrent.LinkedBlockingDeque;
 /**
  * Title: Restore IP Address
  * <p>
- * 题目:
+ * 题目: 给定一个字符串s，字符串中只包含数字，要求返回所有合法的IP地址。给定的字符串中插入三个点，需要变成合法的IP地址
  * <p>
- * 思路：
+ * 思路: IP地址的每一位范围是[0, 255]，所以这是一个dfs的算法，每次可以截取1-3个字节，判断是否合法，如果合法，递归进入找下一个合法数字。
  * <p>
  * 类似题型: IP to CIDR
  */
