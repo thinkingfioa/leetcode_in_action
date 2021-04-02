@@ -5,9 +5,13 @@ import com.thinking.ConsoleOutput;
 /**
  * Title: Wiggle Subsequence
  * <p>
- * 题目:
+ * 题目: 给定一串数字的数组nums[]，要求从数组中找到子序列使其满足: Wiggle Subsequence，输出子序列的长度。
  * <p>
- * 思路:
+ * Wiggle Subsequence要求每两个相邻的数相减得到的结果数组result[]，结果数组result[]中元素满足正负交替
+ * <p>
+ * 思路: 题目的意思转换以下：求数组中nums[]的数字大小转折点的个数，比如nums[i] > nums[i-1]或nums[i]<nums[i+1]
+ * <p>
+ * 分别算一个转折点
  * <p>
  * 类似题型: Tiling a Rectangle with Fewest Squares
  * <p>
