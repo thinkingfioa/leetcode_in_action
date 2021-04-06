@@ -5,9 +5,14 @@ import com.thinking.ConsoleOutput;
 /**
  * Title: Search in Rotated Sorted Array II
  * <p>
- * 题目:
+ * 题目: 给定一个旋转数组nums和目标target，问：判断target是否在旋转数组nums中。循转数组：数组nums从某个下标i开始，[i+1, n-1]是递增的序列，[0,
+ * i]是递减序列，则成为nums按照第i下标进行了旋转。 注意：数组中会有重复相等的数字
  * <p>
- * 思路:
+ * 思路: 题目思路采用的是二分法的变形。 题目突破口在于[left, right]区间， 取中点mid=(left+right)/2后，
+ * <p>
+ * 分为两个区间A=[left, mid)和B=(mid, right]，A和B区间肯定有一个是连续的，优先判断target是否在连续的区间内，如果不再，肯定就在不连续的区间内。
+ * <p>
+ * 提醒：由于数组nums中有重复的相等数组，所以上诉思路无法解决nums=[1, 0, 1, 1, 1, 1, 1, 1]和target=0，该输入需要特殊处理
  * <p>
  * 类似题型:  Search in Rotated Sorted Array
  * <p>
