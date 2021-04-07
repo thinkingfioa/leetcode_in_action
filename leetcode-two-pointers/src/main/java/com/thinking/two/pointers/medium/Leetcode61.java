@@ -5,9 +5,13 @@ import com.thinking.ConsoleOutput;
 /**
  * Title: Rotate List
  * <p>
- * 题目:
+ * 题目: 给定一个数组链表ListNode和一个数k，从数组链表ListNode的右边开始，找到第k个元素，以k元素进行循转。
  * <p>
- * 思路:
+ * 输出旋转后的链表
+ * <p>
+ * 思路: k的值可能比数组链表ListNode的长度还大，所以需要取余数k=k%len。要得到从右数第k个位置的元素，可以转换为
+ * <p>
+ * 从左数len-k元素，然后进行指针的置换。
  * <p>
  * 思路2：快慢指针
  * <p>
