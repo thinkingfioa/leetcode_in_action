@@ -1,6 +1,6 @@
 package com.thinking.string.medium;
 
-import com.thinking.ConsoleOutput;
+import com.thinking.common.ConsoleOutput;
 
 /**
  * Title: Longest Palindromic Substring

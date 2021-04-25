@@ -1,6 +1,6 @@
 package com.thinking.string.medium;
 
-import com.thinking.ConsoleOutput;
+import com.thinking.common.ConsoleOutput;
 import java.util.ArrayList;
 import java.util.List;
 

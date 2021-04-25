@@ -1,6 +1,6 @@
 package com.thinking.greedy.medium;
 
-import com.thinking.ConsoleOutput;
+import com.thinking.common.ConsoleOutput;
 
 /**
  * Title: Wiggle Subsequence

@@ -13,6 +13,7 @@
     <module>leetcode-array</module>
     <module>leetcode-binary-search</module>
     <module>leetcode-common</module>
+    <module>leetcode-design</module>
     <module>leetcode-dp</module>
     <module>leetcode-greedy</module>
     <module>leetcode-heap</module>

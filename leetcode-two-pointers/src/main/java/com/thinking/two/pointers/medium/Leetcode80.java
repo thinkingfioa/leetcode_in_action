@@ -1,6 +1,6 @@
 package com.thinking.two.pointers.medium;
 
-import com.thinking.ConsoleOutput;
+import com.thinking.common.ConsoleOutput;
 
 /**
  * Title: Remove Duplicated form Sorted Array II
