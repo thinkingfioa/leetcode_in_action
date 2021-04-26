@@ -5,9 +5,11 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: Kth Largest Element in an Array
  * <p>
- * 题目:
+ * 题目: 给一个数组nums，找到数组中第k大的数。
  * <p>
- * 思路: 基于快速排序的思路来找第K个大的元素。
+ * 思路: 基于快速排序的思路来找第K个大的元素。我们知道，快排每次都会找到一个位置pos，[0, pos)的所有数都比nums[pos]小
+ * <p>
+ * (pos, len)数都比位置大。我们可以比较pos和k的大小，然后决定去左边递归还是右边递归
  * <p>
  * 类似题型: Wiggle Sort II
  * <p>
