@@ -6,9 +6,9 @@ import java.util.Map;
 /**
  * Title: LRU Cache
  * <p>
- * 题目:
+ * 题目: 编写一个LUR的类
  * <p>
- * 思路:
+ * 思路: 利用JAVA提供的LinkedHashMap实现
  * <p>
  * 类似题型: LFU Cache
  * <p>
