@@ -10,7 +10,7 @@ import java.util.List;
  * <p>
  * 题目: 二叉树的层级遍历
  * <p>
- * 思路:
+ * 思路: 二叉树层次遍历用两个Queue即可，遍历当前层的节点时，每次把下一层级的节点保存到NextQueue，供下次调用
  * <p>
  * 类似题型: Binary Tree Zigzag Level Order Traversal
  * <p>
