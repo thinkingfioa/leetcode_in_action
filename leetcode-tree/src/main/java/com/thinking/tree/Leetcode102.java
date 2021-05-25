@@ -58,7 +58,7 @@ public class Leetcode102 {
     return result;
   }
 
-  public class TreeNode {
+  class TreeNode {
 
     int val;
     TreeNode left;
