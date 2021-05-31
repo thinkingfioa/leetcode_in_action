@@ -16,6 +16,7 @@
     <module>leetcode-design</module>
     <module>leetcode-dp</module>
     <module>leetcode-greedy</module>
+    <module>leetcode-graph</module>
     <module>leetcode-heap</module>
     <module>leetcode-string</module>
     <module>leetcode-tree</module>
