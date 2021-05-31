@@ -11,6 +11,8 @@ import java.util.List;
  * <p>
  * 思路:
  * <p>
+ * 方法一:
+ * <p>
  * 方法二: DFS解法，由于题目中意思是所有的数字都不相同，我们每次可以都从index=0下标开始遍历数组nums。如果数字已经存在，我们就忽略
  * <p>
  * 类似题型:Permutations II
@@ -24,10 +26,39 @@ import java.util.List;
  */
 public class Leetcode46 {
 
+  /**
+   * faster than 6.47%，less than 5.03%
+   */
   public List<List<Integer>> permute(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
-    // TODO 方法一
+    recuDfsSwap(nums, result, 0);
     return result;
+  }
+
+  public void recuDfsSwap(int[] nums, List<List<Integer>> result, int index) {
+    if (index >= nums.length) {
+      result.add(toList(nums));
+      return;
+    }
+    for (int i = index; i < nums.length; i++) {
+      swap(nums, index, i);
+      recuDfsSwap(nums, result, index + 1);
+      swap(nums, index, i);
+    }
+  }
+
+  private List<Integer> toList(int[] nums) {
+    List<Integer> single = new ArrayList<>();
+    for (Integer num : nums) {
+      single.add(num);
+    }
+    return single;
+  }
+
+  private void swap(int[] nums, int fIndex, int sIndex) {
+    int tmp = nums[fIndex];
+    nums[fIndex] = nums[sIndex];
+    nums[sIndex] = tmp;
   }
 
   /**
@@ -56,11 +87,12 @@ public class Leetcode46 {
   }
 
   public static void main(String[] args) {
-    int[] nums = {4, 5, 6};
+    int[] nums = {1, 4, 5, 6};
 
     Leetcode46 leetcode46 = new Leetcode46();
 
     List<List<Integer>> result = leetcode46.permute(nums);
+    System.out.println(result.size());
     ConsoleOutput.printf(result);
   }
 }
