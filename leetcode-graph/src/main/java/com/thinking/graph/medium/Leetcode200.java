@@ -7,7 +7,9 @@ import com.thinking.common.ConsoleOutput;
  * <p>
  * 题目: 给一个二维矩阵grid，grid[i][j]='1'代表陆地，grid[i][j]='0'代表海洋。求grid[i][j]中岛屿的数量。
  * <p>
- * 思路:
+ * 思路: 一道简单的DFS题目。使用visited[i][i]二维数组来标记访问过，visited[i][j]='1'代表可以访问，'0'代表不可以访问。
+ * <p>
+ * 遍历二维矩阵grid中每个元素，每个元素尝试从上、下、左、右四个方向去寻找，走过的位置，将visited[i][j]置为'0'。
  * <p>
  * 类似题型: Surrounded Regions
  * <p>
