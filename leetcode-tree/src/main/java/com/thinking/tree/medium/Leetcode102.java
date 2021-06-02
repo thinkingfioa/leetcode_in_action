@@ -1,4 +1,4 @@
-package com.thinking.tree;
+package com.thinking.tree.medium;
 
 import java.util.ArrayDeque;
 import java.util.ArrayList;

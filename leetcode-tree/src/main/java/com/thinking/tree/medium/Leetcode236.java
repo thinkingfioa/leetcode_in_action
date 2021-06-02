@@ -1,4 +1,4 @@
-package com.thinking.tree;
+package com.thinking.tree.medium;
 
 /**
  * Title: Lowest Common Ancestor of a Binary Tree
