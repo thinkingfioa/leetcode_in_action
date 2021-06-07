@@ -3,9 +3,13 @@ package com.thinking.linked.list.medium;
 /**
  * Title: Reverse Linked List II
  * <p>
- * 题目:
+ * 题目: 给定一个链表头head，和left、right两个数组，要求反转链表中第left至第right之间的所有链表元素。
  * <p>
- * 思路:
+ * 思路: 使用头插法交换第left至第right之间的元素。需要特殊考虑亮点:
+ * <p>
+ * 1. 使用头插法，如果left=1，那么第一个元素就是头。需要特殊处理。通常我们可以构建一个虚拟的头来避免这个特殊场景
+ * <p>
+ * 2. 每次头插入法，都需要保留注：ListNode tmp =move.next，需要赋值给插入的头的next域。
  * <p>
  * 类似题型:  Reverse Linked List
  *
