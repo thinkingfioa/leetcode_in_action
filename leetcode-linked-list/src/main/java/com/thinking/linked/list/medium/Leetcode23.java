@@ -3,11 +3,17 @@ package com.thinking.linked.list.medium;
 /**
  * Title: Merge k Sorted Lists
  * <p>
- * 题目:
+ * 题目: 给定k个升序的链表，将k个升序的链表合并成1个链表
  * <p>
- * 思路:
+ * 思路: 分而治至，将k个生序的链表先对半分，左半边的链表再对半分，右半边的链表再对半分。结束条件是只有一个链表或没有链表。
  * <p>
- * 类似题型:
+ * 将分开后的左半边合并后的结果和右半边合并后的结果通过链表合并算法合并出一个升序的链表，该链表作为返回值返回给上一层
+ * <p>
+ * 使用的和再进行合并。
+ * <p>
+ * 类似题型: Merge Two Sorted Lists
+ * <p>
+ * Ugly Number II
  *
  * @author thinking_fioa 2021/6/5
  */
