@@ -5,9 +5,15 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Title: Binary Tree Maximum Path Sum
  * <p>
- * 题目:
+ * 题目: 给定一个二叉树，找出二叉数中的一条path，这条path的和最大，每个节点只能使用一次，无需必须过root节点。
  * <p>
- * 思路:
+ * 思路: 假设遍历到节点p，需要求出的path路径有几种可能:
+ * <p>
+ * 一：和p节点无关，那么就是p的左子树的出得sumLeft和就是p的左子树的出得sumRight比较
+ * <p>
+ * 二：和p节点有关，那么应该是p左子树+p节点、或p右子树+p节点或者是p左子树+p节点+p的右子树
+ * <p>
+ * 上诉场景下对二叉树遍历，边遍历边求最大值即可
  * <p>
  * 类似题型: Path Sum
  * <p>
