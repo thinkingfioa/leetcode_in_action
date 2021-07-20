@@ -8,14 +8,14 @@ import java.util.List;
 /**
  * Title: Binary Tree Right Side View
  * <p>
- * 题目:
+ * 题目: 给定一个二叉树，求从二叉树右边观察这个树，从上到下看到的值
  * <p>
- * 思路1: 递归
- * <p>
- * 思路2: 非递归
+ * 思路: 利用队列实现层次遍历，每一层中最后一个节点是我们需要纪录的结果值，进行当前层遍历时，把当前层的所有左右子树加到队列中
  *
  * <p>
- * 类似题型:
+ * 类似题型: Populating Next Right Pointers in Each Node
+ * <p>
+ * Boundary of Binary Tree
  *
  * @author thinking_fioa 2021/6/5
  */
