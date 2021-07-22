@@ -3,9 +3,11 @@ package com.thinking.linked.list.medium;
 /**
  * Title: Remove Nth Node From End of List
  * <p>
- * 题目:
+ * 题目: 给定一个链表，移除末尾第N个元素
  * <p>
- * 思路:
+ * 思路: 思路较为简单，使用两个指针：first和second，让first先移动N个元素，随后first和second同时移动，每次移动一步
+ * <p>
+ * 当first移动到链表的末尾时，second则指向了第N个元素，即可删除
  * <p>
  * 类似题型: Swapping Nodes in a Linked List
  *
@@ -15,10 +17,6 @@ public class Leetcode19 {
 
   /**
    * faster than 100% less than 62.38%
-   *
-   * @param head
-   * @param n
-   * @return
    */
   public ListNode removeNthFromEnd(ListNode head, int n) {
     if (head == null) {
