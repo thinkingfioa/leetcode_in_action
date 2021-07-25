@@ -5,9 +5,11 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: Maximum Average Subarray I
  * <p>
- * 题目:
+ * 题目: 给定一个数字数组nums，和一个整数k，数组中连续k个元素最大平均值。
  * <p>
- * 思路:
+ * 思路: 类似这种连续k个元素求和，第一想到的是构建一个sumArray数组，sumArray[i]表示前i个元素的和
+ * <p>
+ * 后期我们根据计算平均值可直接(sumArray[i+k]-sumArray[i])/k，即可得出最大平均值
  * <p>
  * 类似题型: Maximum Average Subarray II
  *
