@@ -3,9 +3,13 @@ package com.thinking.tree.medium;
 /**
  * Title: Construct Binary Tree from Preorder and Inorder Traversal
  * <p>
- * 题目:
+ * 题目: 给定二叉树的先序遍历和中序遍历结果，构建出一个二叉树
  * <p>
- * 思路:
+ * 思路: 采用递归的思路，先序遍历当前访问节点preorder[i]应该是访问的根节点，创建出一个new TreeNode(preorder[i])
+ * <p>
+ * 然后在中序遍历的结果中找到preorder[i]数，将中序遍历数组一分为二，左边用于构建二叉树左节点，右边用于构建二叉树的右节点
+ * <p>
+ * 假设左边二叉树左节点总数为leftCount，我们可以从先序遍历找到preorder[i+1, i+leftCount]截取。依次递归，则可构建出。
  * <p>
  * 类似题型: Construct Binary Tree from Inorder and Postorder Traversal
  *
