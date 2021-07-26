@@ -3,11 +3,19 @@ package com.thinking.linked.list.medium;
 /**
  * Title: Reorder List
  * <p>
- * 题目:
+ * 题目: 给定一个链表: L1->L2->L3->L4->...->Ln，重新对该链表排序。变成: L1->Ln->L2->Ln-1->L3->...
  * <p>
- * 思路:
+ * 思路: 第一步：将链表分为两部分，假设链表的总节点数为num，第一个链表节点数为(n+1)/2，第二链表节点数为n-(n+1)/2
  * <p>
- * 类似题型:
+ * 第二步：反转第二个链表
+ * <p>
+ * 第三步合并第一个链表和反转后的第二个链表，则可得到结果
+ * <p>
+ * 类似题型: Min Stack
+ * <p>
+ * Move Zeroes
+ * <p>
+ * Pancake Sorting
  *
  * @author thinking_fioa 2021/7/22
  */
