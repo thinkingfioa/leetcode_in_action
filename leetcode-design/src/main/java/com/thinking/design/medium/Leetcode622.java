@@ -3,9 +3,13 @@ package com.thinking.design.medium;
 /**
  * Title: Design Circular Queue
  * <p>
- * 题目:
+ * 题目:  设计一个循环队列，
  * <p>
- * 思路:
+ * 思路: 循环队列的设计，最先需要考虑的是：什么时候队列空，什么时候队列满？
+ * <p>
+ * 队列空：初始队列空，可以认为tail == head时，队列空
+ * <p>
+ * 队列满：tail +1 == head时队列满
  * <p>
  * 类似题型: Design Circular Deque
  * <p>
