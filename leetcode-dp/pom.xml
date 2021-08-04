@@ -11,6 +11,14 @@
 
   <artifactId>leetcode-dp</artifactId>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.thinking</groupId>
+      <artifactId>leetcode-common</artifactId>
+      <version>${parent.version}</version>
+    </dependency>
+  </dependencies>
+
   <build>
     <finalName>${project.name}-${project.version}</finalName>
     <resources>

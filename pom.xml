@@ -15,13 +15,14 @@
     <module>leetcode-common</module>
     <module>leetcode-design</module>
     <module>leetcode-dp</module>
-    <module>leetcode-greedy</module>
     <module>leetcode-graph</module>
+    <module>leetcode-greedy</module>
     <module>leetcode-heap</module>
+    <module>leetcode-linked-list</module>
+    <module>leetcode-other</module>
     <module>leetcode-string</module>
     <module>leetcode-tree</module>
     <module>leetcode-two-pointers</module>
-    <module>leetcode-linked-list</module>
   </modules>
 
   <name>leetcode-in-action</name>
