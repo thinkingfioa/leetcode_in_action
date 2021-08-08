@@ -5,10 +5,18 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: Longest Common Subsequence
  * <p>
- * 题目：
+ * 题目： 给两个字符串word1和word2，求两个字符串的公共序列串的长度。所谓公共序列串是指该在原串中删除部分字母得到的字串。
+ * <p>
+ * 这个字串可以被称为原串的序列串
  * <p>
  * <p>
- * 思路：
+ * 思路：类似这种会删除替换字母的题目，可以想到使用动态规划。
+ * <p>
+ * 定义dp[i][j]表示的是word1和word2两个字符串[0, i)和[0, j)的公共字串的长度。
+ * <p>
+ * 1. 当word1[i-1] == word2[j-1]时，dp[i][j] = dp[i-1][j-1] +1
+ * <p>
+ * 2. 当word1[i-1] != word2[j-1]时，dp[i][j] = max(dp[i-1][j-1], dp[i-1][j], dp[i][j-1])最大值。
  * <p>
  * 类似题型: Longest Palindromic Subsequence
  * <p>
