@@ -8,9 +8,11 @@ import java.util.Set;
 /**
  * Title: Minimum Window Substring
  * <p>
- * 题目：
+ * 题目：给定一个字符串s和字符串t，要求求出字符串s的连续字串包含所有字符串t，这个连续子串的长度要保证最小。测试用例保证答案唯一
  * <p>
- * 思路：
+ * 思路：第一步: 需要思考的是，如何判断出字符串t在字串s'中每个元素都有。我们利用的Map，将两个字符串转换成Map，通过比较Map来判断相等
+ * <p>
+ * 第二步: 如何求出长度最小，其实这个很自然想到的就是滑动窗口当发现右边界中可以得到结果时，通过收缩左边界来尝试算出最短的解
  * <p>
  * 类似题型: Substring with Concatenation Of All Words
  * <p>
@@ -29,7 +31,7 @@ import java.util.Set;
 public class Leetcode76 {
 
   /**
-   * faster than 5.03%, less than 38.58%
+   * faster than 5.03%, less than 38.58%。通过率低，但是思路与通过率高的一模一样
    */
   public String minWindow(String s, String t) {
     if (s.length() < t.length()) {
