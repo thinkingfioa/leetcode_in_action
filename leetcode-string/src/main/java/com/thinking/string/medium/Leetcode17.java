@@ -7,9 +7,9 @@ import java.util.List;
 /**
  * Title: Letter Combinations of a Phone Number
  * <p>
- * 题目：
+ * 题目：给定一个数字数组digits[]，digits[]数组中的每个元素都是2-9数字组成，根据9宫格的标准，输出组合出来的所有字母的情况
  * <p>
- * 思路：
+ * 思路：典型的DFS思路，每一层都遍历一遍，参与结果的组合。当递归的层级大于digits.size()时，则找到一种结果
  * <p>
  * 类似题型: Generate Parentheses
  * <p>
