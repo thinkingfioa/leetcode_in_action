@@ -12,7 +12,7 @@ package com.thinking.linked.list.medium;
  * 思路: 所有的链表问题，建议都先加上一个虚拟节点头，避免头节点重复时，需要特殊处理
  * <p>
  * 定义三个指针：p1, p2, p3。p1是第一个不重复的位置，p2和p3分别是重复数字的头和尾部节点的后一个节点。
- *
+ * <p>
  * 当发现p2=p3时，会让p3一直往后移动，直到p3!=p2或者到链表末尾。
  * <p>
  * 类似题型: Remove Duplicates from Sorted List
