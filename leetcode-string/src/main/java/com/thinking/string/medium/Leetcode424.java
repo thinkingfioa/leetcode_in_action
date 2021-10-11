@@ -5,9 +5,15 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: Longest Repeating Character Replacement
  * <p>
- * 题目：
+ * 题目：给定一个大写字符串s和数字k，要求：允许替换字符串s中k个字符，求：被替换后的字符串s中最长的重复字串长度
  * <p>
- * 思路：
+ * 思路：本质是一个滑动窗口题，整个窗口的大小是一个变长，其最大的窗口长度则是本题的解。
+ * <p>
+ * 根据贪心的思路：题目的最优解，一定是窗口中重复字符最多的才有可能是最优解
+ * <p>
+ * 所以，当访问一个s[index]时，窗口的右区间增大1，由于s[index]的加入变大，可能导致窗口中的重复字符变大，进而产生更优解。
+ * <p>
+ * 但可能k的次数已经用完，我们需要调整下窗口的左区间。找到end-begin+1==maxCount+k时，整个值end-begin+1很有可能是最优解
  * <p>
  * 类似题型: Longest Substring with At Most K Distinct Characters
  * <p>
