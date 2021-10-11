@@ -22,9 +22,15 @@ import java.util.List;
  *    null  null   3    7
  * </pre>
  * <p>
- * 思路:
+ * 思路: BST数有一个特点：中序遍历是有序的。
  * <p>
- * 类似题型:
+ * 第一步：创建一个List，中序遍历二叉树
+ * <p>
+ * 第二步：检查List是否都是有序的
+ * <p>
+ * 类似题型: Binary Tree Inorder Traversal
+ * <p>
+ * Find Mode in Binary Search Tree
  * <p>
  * Time Needed to Inform All Employees
  *
@@ -33,8 +39,7 @@ import java.util.List;
 public class Leetcode98 {
 
   /**
-   * @param root
-   * @return
+   * faster than 42.99%， less than 54.65%
    */
   public boolean isValidBST(TreeNode root) {
     if (root == null) {
