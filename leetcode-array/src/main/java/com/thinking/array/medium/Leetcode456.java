@@ -2,6 +2,8 @@ package com.thinking.array.medium;
 
 
 import com.thinking.common.ConsoleOutput;
+import java.util.ArrayDeque;
+import java.util.Deque;
 
 /**
  * Title: 132 Pattern
@@ -16,8 +18,23 @@ import com.thinking.common.ConsoleOutput;
  */
 public class Leetcode456 {
 
+  /**
+   * faster than 36.62%，less than 21.90%
+   */
   public boolean find132pattern(int[] nums) {
-
+    int second = Integer.MIN_VALUE;
+    Deque<Integer> stack = new ArrayDeque<>();
+    for (int i = nums.length - 1; i >= 0; i--) {
+      if (nums[i] < second) {
+        return true;
+      }
+      while (!stack.isEmpty() && nums[i] > stack.peek()) {
+        second = stack.peek();
+        stack.pop();
+      }
+      stack.push(nums[i]);
+    }
+    return false;
   }
 
   /**
