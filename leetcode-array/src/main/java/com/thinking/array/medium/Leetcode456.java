@@ -1,6 +1,5 @@
 package com.thinking.array.medium;
 
-
 import com.thinking.common.ConsoleOutput;
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -8,11 +7,25 @@ import java.util.Deque;
 /**
  * Title: 132 Pattern
  * <p>
- * 题目:
+ * 题目: 给定一个数组nums，求数组中是否存在132模式的数字存在。即: i< j < k && nums[i] < nums[k] < nums[j]
  * <p>
- * 思路:
+ * 思路: 题目的突破口在于第二大的数nums[k]。从数组的右边往左遍历，如果我们能发现存在第二大的数nums[k]，且发现当前遍历的nums[i]<nums[k]
  * <p>
- * 类似题型:
+ * 即说明数组nums中存在132的模式。此过程为了能找到第二大的数nums[k]，需要借助栈。
+ * <p>
+ * 第一步：如果发现nums[i]<nums[k]，即找到了解。因为nums[k]是从右往左目前的第二大的数
+ * <p>
+ * 第二步：如果stack是空的，直接入栈
+ * <p>
+ * 第三步：如果发现nums[i]>stack.top，说明stack.top可能第二大的数nums[k]，所以我们将栈顶弹出，尝试更新
+ * <p>
+ * 第四步：如果发现nums[i]<stack.top，直接入栈，供后续的数来判断
+ * <p>
+ * 类似题型: Combinations
+ * <p>
+ * Smallest Good Bese
+ * <p>
+ * Bold Words in String
  *
  * @author thinking_fioa 2021/10/12
  */
