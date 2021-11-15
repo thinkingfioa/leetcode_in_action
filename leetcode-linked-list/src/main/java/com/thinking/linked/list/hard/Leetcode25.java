@@ -10,7 +10,11 @@ package com.thinking.linked.list.hard;
  * output    2 -> 1 -> 4 -> 3 -> 5
  * </pre>
  * <p>
- * 思路:
+ * 思路: 第一步，先计算链表的长度len；并头插一个虚拟节点
+ * <p>
+ * 第二步，len/k得出需要反转的次数，随后进行for循环。
+ * <p>
+ * 第三步，使用头插法，逆转节点。
  * <p>
  * 类似题型: Swap Nodes in Pairs
  * <p>
