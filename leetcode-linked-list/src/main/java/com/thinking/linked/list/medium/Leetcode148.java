@@ -5,9 +5,17 @@ package com.thinking.linked.list.medium;
  * <p>
  * 题目: 给定一个链表，请排序链表，要求时间时间复杂度为O(n*logn)和空间复杂度为O(1)
  * <p>
- * 思路:
+ * 思路: 题目要求O(n*logn)排序，第一个考虑的就是归并排序。
  * <p>
- * 类似题型:
+ * 第一步：二分法需要直到half的位置，这个我们可以使用快慢指针找到half的位置。
+ * <p>
+ * 第二步：将原链表一分为二，递归进入去排序，分别会得到左半边有序的链表leftNode和右半边有序的链表rightNode
+ * <p>
+ * 第三步：合并leftNode和rightNode
+ * <p>
+ * 类似题型: Merge Two Sorted Lists
+ * <p>
+ * Insertion Sort List
  *
  * @author thinking_fioa 2021/10/19
  */
