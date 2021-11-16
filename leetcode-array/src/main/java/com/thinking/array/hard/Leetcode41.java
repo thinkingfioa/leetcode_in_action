@@ -5,13 +5,21 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: First Missing Positive
  * <p>
- * 题目: 给定一个无序的数组nums[]，找到数组中第一个未出现的正整数
+ * 题目: 给定一个无序的数组nums[]，找到数组中第一个未出现的正整数，题目最终的要求是O(n)和常量的空间
  * <pre>
  *   input     3,4,-1,1
  *   output    2
  * </pre>
  * <p>
- * 思路:
+ * 思路1: 假设允许开辟一个新的空间数组positiveNums[]，我们可以将无序数组nums[]中每个元素取出nums[i]，
+ * <p>
+ * 作为放到数组positiveNums[nums[i]-1]的位置上。完成后遍历positiveNums[]第一个不存在的即可。
+ * <p>
+ * 但题目要求是使用常量空间，意味着不允许新开辟数组。
+ * <p>
+ * 但我们可以思考是不是可以在原数组中做，遍历nums[]数组时，发现nums[i]<length,交换nums[nums[i]-1]和nums[i]的值，再重复检查nums[i]。
+ * <p>
+ * 提醒：要特殊处理nums[nums[i]-1]==nums[i]的场景，避免死循环
  * <p>
  * 思路2：比较简单的想法是，先对数组排序，然后再找第一个未出现的正整数。但题目最终的要求是O(n)和常量的空间
  * <p>
