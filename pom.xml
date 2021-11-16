@@ -24,6 +24,7 @@
     <module>leetcode-string</module>
     <module>leetcode-tree</module>
     <module>leetcode-two-pointers</module>
+    <module>leetcode-dfs</module>
   </modules>
 
   <name>leetcode-in-action</name>
