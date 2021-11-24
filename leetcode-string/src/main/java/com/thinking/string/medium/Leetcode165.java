@@ -15,7 +15,9 @@ import com.thinking.common.ConsoleOutput;
  * <p>
  * 如果 version1 = version2，输出：0
  * <p>
- * 思路:
+ * 思路: 字符串version1和字符串version2先通过split(\\.)方法分成数组array1[]和array2[]，
+ * <p>
+ * 然后从下标0开始比较两个数组的每个元素: array1[i] > array2[i]
  * <p>
  * 类似题型: One Edit Distance
  * <p>
@@ -33,9 +35,6 @@ public class Leetcode165 {
   public int compareVersion(String version1, String version2) {
     String[] ver1Array = version1.split("\\.");
     String[] ver2Array = version2.split("\\.");
-
-    ConsoleOutput.printf(ver1Array);
-    ConsoleOutput.printf(ver2Array);
 
     int maxNum = Math.max(ver1Array.length, ver2Array.length);
     for (int index = 0; index < maxNum; index++) {
