@@ -5,55 +5,39 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: Search a 2D Matrix II
  * <p>
- * 题目:
+ * 题目: 给定一个二维数组matrix[][]，和一个目标数字target。判断target是否在二维数字matrix[][]中存在。
+ * <p>
+ * 二维数组matrix[][]非常有特点：对于行，从左往右是递增的；对于列，从上往下是递增的。
  * <p>
  * 思路：
  * <p>
- * 误区：二分法求解
+ * 类似题型： Paint House
  * <p>
- * 类似题型：
+ * Add to Array-Form of Integer
+ * <p>
+ * Shortest Path in a Grid with Obstacles Elimination
  *
  * @author vlin 2021/11/29
  */
 public class Leetcode240 {
 
+  /**
+   * faster than 100.00%，less than 51.79%
+   */
   public boolean searchMatrix(int[][] matrix, int target) {
     int m = matrix.length;
     int n = matrix[0].length;
-    if (m == 1 && n == 1) {
-      return matrix[0][0] == target;
-    }
 
-    int row = 0;
-    int beginColumn = 0;
-    int endColumn = n - 1;
-    while (beginColumn < endColumn) {
-      int mid = (beginColumn + endColumn) / 2;
-      if (matrix[row][mid] == target) {
+    int beginRow = 0;
+    int beginColumn = n - 1;
+
+    while (beginRow < m && beginColumn >= 0) {
+      if (matrix[beginRow][beginColumn] == target) {
         return true;
-      } else if (matrix[row][mid] < target) {
-        beginColumn = mid + 1;
+      } else if (matrix[beginRow][beginColumn] > target) {
+        beginColumn--;
       } else {
-        endColumn = mid - 1;
-      }
-    }
-
-    ConsoleOutput.printf(beginColumn);
-    ConsoleOutput.printf(endColumn);
-
-    for (int column = endColumn; column >= 0 && column >= endColumn - 1;
-        column--) {
-      int beginRow = 0;
-      int endRow = m - 1;
-      while (beginRow <= endRow) {
-        int mid = (beginRow + endRow) / 2;
-        if (matrix[mid][column] == target) {
-          return true;
-        } else if (matrix[mid][column] < target) {
-          beginRow = mid + 1;
-        } else {
-          endRow = mid - 1;
-        }
+        beginRow++;
       }
     }
 
