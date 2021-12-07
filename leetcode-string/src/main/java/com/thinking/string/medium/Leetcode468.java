@@ -12,16 +12,15 @@ import java.util.regex.Pattern;
  * <p>
  * IPv6需要符合"x1:x2:x3:x4:x5:x6:x7:x8"格式，1<=xi.length<=4 && xi中每个是十六进值的数
  * <p>
- * 思路1:
+ * 思路1: 使用代码split(\\.)来将IPv4和IPv6各个域拆拆开，每个域来判断合法性
  * <p>
- * 思路2:
+ * 思路2: 使用Java的正则表达方式。对于IPv4要注意，单个xi为三位数字时候1开头和24或25开头需要单独判断
  * <p>
  * 类似题型:
  *
  * @author vlin 2021/11/22
  */
 public class Leetcode468 {
-
 
   /**
    * faster than 98.37%，less than 35.58%
