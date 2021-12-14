@@ -5,9 +5,15 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: Largest Number
  * <p>
- * 题目:
+ * 题目: 给一串非负数整数nums[]，重排该数组，以得到最大的一个数字。为避免数字越界，结果使用字符串表示
  * <p>
- * 思路：
+ * 思路：假设给定两个数字num1和num2，如果能把num1和num2比较排序，那么可以使用快排对整个nums[]数组排序，
+ * <p>
+ * 以得到要求的数列，再组装即可。
+ * <p>
+ * 如何比较num1和num2随应该在第一个，谁在第二个，其实非常简单，将num1和num2都看成字符串，
+ * <p>
+ * 两个字符串相加得到str1="Num1Num2"和str2="Num2Num1"，比较str1和str2即可。
  * <p>
  * 类似题型：Remove Vowels from a String
  * <p>
