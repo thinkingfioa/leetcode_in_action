@@ -9,8 +9,12 @@ import com.thinking.common.ConsoleOutput;
  * <p>
  * 二维数组matrix[][]非常有特点：对于行，从左往右是递增的；对于列，从上往下是递增的。
  * <p>
- * 思路：
- * <p>
+ * 思路：假设给你一个数字matrix[i][j]，我们将这个数字与target比较。
+ * <pre>
+ * if        matrix[i][j] == target，则return true
+ * else if   matrix[i][j] > target，则 column-1 去查找
+ * else      matrix[i][j] < target，则 row+1 去查找
+ * </pre>
  * 类似题型： Paint House
  * <p>
  * Add to Array-Form of Integer
