@@ -29,7 +29,7 @@ public class Leetcode22 {
   private static final String RIGHT = ")";
 
   /**
-   * faster than 5.26%，less than 34.00%
+   * faster than 13.26%，less than 40.00%
    */
   public List<String> generateParenthesis(int n) {
     if (n == 0) {
