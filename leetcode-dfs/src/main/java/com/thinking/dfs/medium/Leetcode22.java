@@ -15,7 +15,9 @@ import java.util.Set;
  *     输出：["((()))","(()())","(())()","()(())","()()()"]
  * </pre>
  * <p>
- * 思路:
+ * 思路: 使用DFS思路解决，符合括号形式的是left >= Right，说明都可以继续往下做。
+ * <p>
+ * 递归进入一层，则先补充'('，随后在遍历从left到right之间，补充')'。记得结果去重
  * <p>
  * 类似题型: Valid Parentheses
  *
@@ -34,36 +36,41 @@ public class Leetcode22 {
       return new ArrayList<>();
     }
     Set<String> listSet = new HashSet<>();
-    dfs(listSet, "", 2 * n, 0, 0);
+    dfs(listSet, n, "", 2 * n, 0, 0);
     return new ArrayList<>(listSet);
   }
 
-  public void dfs(Set<String> listSet, String result, int n, int leftNum, int rightNum) {
+  public void dfs(Set<String> listSet, int origN, String result, int n, int leftNum, int rightNum) {
     if (n == 0 && leftNum == rightNum && !listSet.contains(result)) {
       listSet.add(result);
       return;
     }
+
+    if (leftNum > origN) {
+      return;
+    }
+
     if (n < 0) {
       return;
     }
 
-    dfs(listSet, result + LEFT, n - 1, leftNum + 1, rightNum);
+    dfs(listSet, origN, result + LEFT, n - 1, leftNum + 1, rightNum);
 
     String tmpResult = result;
     int tmpN = n;
     for (int beginRightNum = rightNum + 1; beginRightNum <= leftNum; beginRightNum++) {
       tmpResult = tmpResult + RIGHT;
       tmpN = tmpN - 1;
-      dfs(listSet, tmpResult, tmpN, leftNum, beginRightNum);
+      dfs(listSet, origN, tmpResult, tmpN, leftNum, beginRightNum);
     }
   }
 
   public static void main(String[] args) {
     // Output ["((()))","(()())","(())()","()(())","()()()"]
-//    int n = 3;
+    int n = 3;
 
     // Output ["()"]
-    int n = 1;
+//    int n = 1;
     Leetcode22 leetcode22 = new Leetcode22();
     ConsoleOutput.printf(leetcode22.generateParenthesis(n));
   }
