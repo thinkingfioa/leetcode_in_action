@@ -12,9 +12,21 @@ import java.util.Map;
  * <p>
  * 请写一个深度拷贝构造函数，构造一个新的链表返回
  * <p>
- * 思路:
+ * 思路: 题目难点在于每个Node节点中有一个Node random元素，解题思路分为两个步骤：
  * <p>
- * 类似题型:
+ * 第一：先按照通用的方法深度拷贝构造一个新的链表，拷贝过程中，构建两个，第一个map为<Node, index/>，key是原始Node
+ * <p>
+ * 元素的地址，index是在原始链表的下标索引；第二个map为<index, Node/>，key是新的链表的下标索引，value是在新的链表的节点。
+ * <p>
+ * 两个map利用index作为中转。
+ * <p>
+ * 第二：再次一遍，根据第一次遍历构建出来的两个map，构建Node random三个元素。
+ * <p>
+ * 类似题型: Clone Graph
+ * <p>
+ * Clone Binary Tree With Random Pointer
+ * <p>
+ * Clone N-ary Tree
  *
  * @author vlin 2021/12/16
  */
