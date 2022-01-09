@@ -14,7 +14,11 @@ import com.thinking.common.ConsoleOutput;
  *   output: 4
  * </pre>
  * <p>
- * 思路:
+ * 思路: 利用动态规划来实现。定义dp[i][j]=m表示，以(i,j)为起点，最大的正方形变长。
+ * <p>
+ * 动归方程: dp[i][j] = min(dp[i-1][i], dp[i-1][j-1], dp[i][j-1])+1。
+ * <p>
+ * 两道for循环，从左上到右下，依次遍历
  * <p>
  * 类似题型: Maximal Rectangle
  * <p>
