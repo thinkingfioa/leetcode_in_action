@@ -13,7 +13,9 @@ import com.thinking.common.ConsoleOutput;
  *   Output: 4
  * </pre>
  * <p>
- * 思路:
+ * 思路: 题目明显是一道动态规划题目。定义dp[i]表示第i个房间时最大硬币数，且必须包括nums[i-1]。动态方程为
+ * <p>
+ * dp[i] = max(dp[i-2] + nums[i-1], dp[i-3]+nums[i-1])，在遍历的过程中记录最大值。
  * <p>
  * 类似题型: Maximum Product Subarray
  * <p>
