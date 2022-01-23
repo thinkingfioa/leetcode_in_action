@@ -3,7 +3,7 @@ package com.thinking.other.thirdparty;
 import com.thinking.common.ConsoleOutput;
 
 /**
- * Title: 电梯模拟
+ * Title: Simulator Elevator 电梯模拟
  * <p>
  * 题目: 第一个数字num表示有多少个乘客，第二个数字表示目前电梯所在的楼层，
  * <p>
@@ -93,9 +93,14 @@ public class SimulatingElevator {
 
   public static void main(String[] args) {
     // Output 270
-    int num = 4;
+//    int num = 4;
+//    int storey = 50;
+//    int[][] target = {{50, 10}, {40, 20}, {30, 100}, {30, 100}};
+
+    // Output 109
+    int num = 3;
     int storey = 50;
-    int[][] target = {{50, 10}, {40, 20}, {30, 100}, {30, 100}};
+    int[][] target = {{12, 66}, {25, 27}, {26, 83}};
 
     SimulatingElevator simulatingElevator = new SimulatingElevator();
     ConsoleOutput.printf(simulatingElevator.simulatingElevator(num, storey, target));
