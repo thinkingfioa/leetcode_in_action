@@ -14,7 +14,18 @@ import com.thinking.common.ConsoleOutput;
  *   output: 1, 2, 4, 7, 5, 3, 6, 8, 9
  * </pre>
  * <p>
- * 思路:
+ * 思路: 定义一个变量rightUp，当rightUp=true时表示往右上移动，rightUp=false表示往左下移动。
+ * <p>
+ * 当rightUp=true往右上移动时，分为两种情况：
+ * <p>
+ * 第一: 当触发了rowIndex=0或columnIndex = Max时，需要换方向rightUp=false。
+ * <pre>
+ *   1.1 columnIndex = Max，下次起点就是rowIndex = rowIndex + 1, columnIndex = Max
+ *   1.2 rowIndex = 0，下次起点就是rowIndex = 0, columnIndex = columnIndex+1
+ * </pre>
+ * 第二: 未触发了rowIndex=0或columnIndex = Max时，则rowIndex=rowIndex-1, columnIndex=columnInde+1
+ * <p>
+ * 当rightUp=false往左下移动时，类似。
  * <p>
  * 类似题型: Decode the Slanted Ciphertext
  *
