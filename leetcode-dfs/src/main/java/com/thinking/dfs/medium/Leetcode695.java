@@ -16,7 +16,13 @@ import com.thinking.common.ConsoleOutput;
  *     输出：4
  * </pre>
  * <p>
- * 思路:
+ * 思路: 明显是一道dfs题目。构建一个visited数组，初始化每个值都为0，如果访问过就visited[i][j]=1。
+ * <p>
+ * 从二维数组grid[][]中每个grid[i][j]=1 && visited[i][j]=0开始，向上下左右去寻找是否有
+ * <p>
+ * grid[i][j]=1 && visited[i][j]=0的数，有则num+1。等通过DFS的回溯遍历完后，返回num。
+ * <p>
+ * 统计所有返回的num的最大值，则是结果
  * <p>
  * 类似题型: Island Perimeter
  * <p>
