@@ -8,13 +8,14 @@ import com.thinking.common.ConsoleOutput;
  * 题目: 给定一个全部都是正整数的数组nums[]和一个正整数target。求数组nums[]最少的子数组和大于等于target，
  * <p>
  * 输出该子数组的元素长度
- *
  * <pre>
  *   input:  target = 7, nums= {1, 2, 3, 4, 5}
  *   output: 3，因为subNum= {3, 4, 5}
  * </pre>
  * <p>
- * 思路：
+ * 思路：滑动窗口思路。定义一个滑动窗口的左区间点left=-1，和子数组的和tmpResult。从数组的左边往右边遍历
+ * <p>
+ * 当发现tmpResult>=target时，那么i-left就是其中的一个解，此时，为得到最优解，尝试移动left，缩小滑动窗口，以得到最优解。
  * <p>
  * 类似题型：Maximum Size Subarray Sum Equals k
  * <p>
