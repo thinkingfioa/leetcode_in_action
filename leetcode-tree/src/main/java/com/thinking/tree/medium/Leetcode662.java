@@ -18,7 +18,11 @@ import java.util.concurrent.atomic.AtomicInteger;
  *   output : 8
  * </pre>
  * <p>
- * 思路:
+ * 思路: 计算二叉树节点层次中的最大宽度，夹在中间的null节点也算。假如我们直到某个节点所对应的二叉树的序号index
+ * <p>
+ * ，那么其左孩子节点则是2*index，右孩子节点则是2*index+1。其实题目的本质就是求每层算出层次中的最大值。
+ * <p>
+ * 利用DFS算法，层次递归，每层保存最大的宽度，遍历过程中找到题目层的最大节点宽度。
  * <p>
  * 类似题型: Minesweeper
  * <p>
