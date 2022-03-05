@@ -9,7 +9,11 @@ import java.util.Deque;
  * <p>
  * 题目：给定一个符合计算式的字符串，如：s = "3+2*2"，求出表达式的计算结果
  * <p>
- * 思路：
+ * 思路：由于题目中只有加，减，乘，除。定义一个变量lastOp来标记上一个操作符，所以当发现一个新的符号时，如果上次的是乘，除
+ * <p>
+ * 则先从队列中弹出最后一个数，进行计算结果，再把结果放进去。
+ * <p>
+ * 为避免减号影响计算，定义的队列中只存正数。
  * <p>
  * 类似题型: Basic Calculator
  * <p>
@@ -27,9 +31,49 @@ public class Leetcode227 {
   private static final char MUL = '*';
 
   /**
-   * faster than 33.93%，less than 38.51%
+   * faster than 30.03%，less than 17.06%
    */
   public int calculate(String s) {
+    s += "+0";
+    Deque<Integer> numDeque = new ArrayDeque<>();
+    int curNum = 0;
+    char lastOp = ' ';
+    for (int i = 0; i < s.length(); i++) {
+      char single = s.charAt(i);
+      if (single == ' ') {
+        continue;
+      }
+      if (single >= '0' && single <= '9') {
+        curNum = curNum * 10 + single - '0';
+      } else {
+        if (lastOp == PLUS) {
+          numDeque.add(curNum);
+        } else if (lastOp == SUB) {
+          numDeque.add(-curNum);
+        } else if (lastOp == DIV) {
+          int other = numDeque.pollLast();
+          numDeque.add(other / curNum);
+        } else if (lastOp == MUL) {
+          int other = numDeque.pollLast();
+          numDeque.add(other * curNum);
+        } else {
+          numDeque.add(curNum);
+        }
+        lastOp = single;
+        curNum = 0;
+      }
+    }
+    int result = 0;
+    while (!numDeque.isEmpty()) {
+      result += numDeque.pollLast();
+    }
+    return result;
+  }
+
+  /**
+   * faster than 33.93%，less than 38.51%
+   */
+  public int calculate2(String s) {
     s = s + "+0";
     Deque<Integer> numDeque = new ArrayDeque<>();
     Deque<Character> digitDeque = new ArrayDeque<>();
@@ -64,9 +108,6 @@ public class Leetcode227 {
       start++;
     }
     numDeque.add(curNum);
-
-//    ConsoleOutput.printf(digitDeque);
-//    ConsoleOutput.printf(numDeque);
 
     while (!digitDeque.isEmpty()) {
       char digit = digitDeque.pollFirst();
