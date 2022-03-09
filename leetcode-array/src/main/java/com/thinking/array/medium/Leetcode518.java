@@ -5,13 +5,23 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: Coin Change 2
  * <p>
- * 题目: 给定一个数组coins[]和总金额amount。求从数组coins[]中选择硬币组装成总金额amount的所有组合，每个硬币可以使用多次
+ * 题目: 给定一个数组coins[]和总金额amount。求从数组coins[]中选择硬币组装成总金额amount的所有组合个数，每个硬币可以使用多次
  * <p>
- * 思路：
+ * 思路：定义dp[i]表示组装成总金额i的组合个数. 那么题目开始有两种遍历方式：
+ * <p>
+ * 第一种：第一道for循环是[1, amount] + 第二道for循环时coins[]数组。dp[i]= dp[i]+dp[i-coin]。但这个思路有问题，
+ * <p>
+ * 比如dp[3]=dp[2]+dp[1]是很有问题的，如果只有一个coin=1的，这个答案明显有问题。
+ * <p>
+ * 第二种：第一道for循环时coins[]数组 + 第二道for循环是[coin, amount]。 dp[i]= dp[i]+dp[i-coin]。
+ * <p>
+ * 意味着每次我获取一个coin，都去尝试更新下dp[i]数组，这种方法可解。
  * <p>
  * 思路2：如果使用DFS方法，算法复杂度太高，会超时
  * <p>
  * 类似题型：Move Zeroes
+ * <p>
+ * Coin Change
  * <p>
  * Search Suggestions System
  * <p>
@@ -35,6 +45,7 @@ public class Leetcode518 {
         }
       }
     }
+
     return dp[amount];
   }
 
