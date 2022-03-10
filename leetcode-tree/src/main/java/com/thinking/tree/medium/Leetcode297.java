@@ -8,7 +8,15 @@ import java.util.Deque;
  * <p>
  * 题目: 序列化和反序列化一个二叉树。给定一个二叉树，提供序列化和反序列化功能
  * <p>
- * 思路:
+ * 思路: 利用层次遍历来实现二叉树的序列化和反序列化。
+ * <p>
+ * 定义如果节点为空，用MIN_VALUE表示，每个节点之间使用','来做分割。
+ * <p>
+ * 序列化：本质上就是层次遍历，将层次遍历结果存到StringBuilder中
+ * <p>
+ * 反序列化：先将String根据','来做分割，然后将第一个节点作为根节点放到队列中，随后每次循环从队列中弹出一个节点A，
+ * <p>
+ * 再从字符串中取出两个节点B和C，判断取出的两个节点B和C是否为空，分别挂到节点A的左右子树上，再将不为空的节点入队列
  * <p>
  * 类似题型: Encode and Decode Strings
  * <p>
@@ -26,7 +34,7 @@ public class Leetcode297 {
   private static final String SPLIT = ",";
 
   /**
-   * faster then 41.45%, less than 41.00%
+   * fast then 41.45%, less than 41.00%
    */
   public String serialize(TreeNode root) {
     if (root == null) {
