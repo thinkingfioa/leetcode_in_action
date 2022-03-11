@@ -40,3 +40,5 @@ target/*
 */.gitignore
 .settings/*
 /target
+/interview/redis/target/
+/interview/target/
