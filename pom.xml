@@ -25,6 +25,8 @@
     <module>leetcode-tree</module>
     <module>leetcode-two-pointers</module>
     <module>leetcode-dfs</module>
+    <module>interview</module>
+    <module>interview/redis</module>
   </modules>
 
   <name>leetcode-in-action</name>
