@@ -7,7 +7,7 @@ import java.util.Deque;
 /**
  * Title: Decode String
  * <p>
- * 题目: 给定一个字符串，字符串中存在"k[encode_str]"类型的字串，其中k是一个数字型，encode_str字串，
+ * 题目: 给定一个字符串，字符串中存在"k[encode_str]"类型的字串，其中k是一个数字型，encode_str是字串，
  * <p>
  * "k[encode_str]"代表有k个字串encode_str组成，即：$encode_str$encode_str$encode_str...
  * <p>
@@ -18,7 +18,15 @@ import java.util.Deque;
  *   output： accaccacc
  * </pre>
  * <p>
- * 思路:
+ * 思路: 使用队列，特殊处理字符串中几个关键的字符类型
+ * <p>
+ * 第一个：数字。对于数字，当发现某个char在['0','9']之间时，利用while循环，将整个数字截取下来，存放到队列中
+ * <p>
+ * 第二个：对于']'时，需要从队列中弹出字符，拼成子字符串subStr，直到遇到'['时，意味着下个时一个数字num。
+ * <p>
+ * 利用弹出的数字num和字符串subStr，拼成完成的字符串，入队列
+ * <p>
+ * 第三个：其他字符类型一律入队列
  * <p>
  * 类似题型: Encode String with Shortest Length
  * <p>
