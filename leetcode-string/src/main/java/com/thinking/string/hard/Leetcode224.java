@@ -9,7 +9,13 @@ import java.util.Deque;
  * <p>
  * 题目：给定一个字符串s，该字符串s是一个合法的计算式，求计算的数值。只会有'+'、'-'、'('和')'
  * <p>
- * 思路：
+ * 思路：由于合法的计算式中有'('和')'，需要特殊每个'('前的符号。其实对于每一对'('和')'都是一个完整的合法计算式。
+ * <p>
+ * 所以，对于每次遇到'('时，我们都将当前计算的结果和'('前的符号压入队列中保存起来，重新开始计算'('和')'的结果
+ * <p>
+ * 当遇到')'时，我们将计算出的结果与刚刚保存到队列中的值和符号做运算，算出结果
+ * <p>
+ * 思路2：先将合法的计算式转成逆波兰方程式，再通过计算逆波兰的算法来计算
  * <p>
  * 类似题型: Evaluate Reverse Polish Notation
  * <p>
@@ -29,7 +35,6 @@ public class Leetcode224 {
    * faster than 89.01%，less than 50.26%.
    */
   public int calculate(String s) {
-
     Deque<Integer> queue = new ArrayDeque<>();
     int sign = 1;
     int result = 0;
