@@ -11,7 +11,11 @@ import java.util.Deque;
  * <p>
  * j天后温度会更高
  * <p>
- * 思路：
+ * 思路：递减栈(栈底大于栈顶)。假设访问到temperatures[i]节点，题目要求的是从temperatures[i]开始，找到第一个比
+ * <p>
+ * temperatures[i]大的节点temperatures[j]，则answer[i]=j-i。
+ * <p>
+ * 所以，如果一个栈，栈中存放的是数组的下标，当前访问的节点temperatures[j]如果比栈顶的元素大，则栈顶出栈计算。
  * <p>
  * 思路2：利用两道for循环，题目刚好能直接过，时间复杂度高
  * <p>
