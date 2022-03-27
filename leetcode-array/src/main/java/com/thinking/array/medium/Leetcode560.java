@@ -9,7 +9,13 @@ import java.util.Map;
  * <p>
  * 题目: 给定一个数组nums[]和一个整数k，数组中既有正数也有负数，求数组nums[]的子数组的个数，该子数组的和等于k
  * <p>
- * 思路：
+ * 思路：定一个映射map<Integer, Integer/>，key是表示目前[0,index]的子数组和，value是表示数组和出现的次数。
+ * <p>
+ * 遍历一个for从左往右循环遍历，使用sum变量记录目前的总和，在map中查找sum-k的值出现次数累加到变量result中。
+ * <p>
+ * 这个想法非常厉害，从目的结果出发：题目求的是子数组和等于k，那我将目前的sum-k，如果能从map中找到sum-k出现的次数
+ * <p>
+ * ，则代表子数组和等于k的次数
  * <p>
  * 思路2：动态规划dp[i][j]表示[i,j)的和，然后判断dp[i][j]==k，会出现Time Limit Exceeded
  * <p>
