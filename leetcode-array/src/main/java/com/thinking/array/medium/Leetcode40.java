@@ -6,6 +6,14 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
+ * Title: Combination Sum II
+ * <p>
+ * 题目：给定一个候选数组candidates和一个目标target，从候选数组中candidates挑选数字求和等于target。
+ * <p>
+ * 思路：使用DFS算法遍历所有候选数组candidates中每个元素，尝试求和，由于每个元素只使用一次，所以遍历的
+ * <p>
+ * for循环中应该这for(int i=index;index<len;<index++)
+ * <p>
  * {@link Leetcode39}变形题. 区别：候选次数只能使用一次.
  *
  * @author thinking_fioa 14/09/2019
