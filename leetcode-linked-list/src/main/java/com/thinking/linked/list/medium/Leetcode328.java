@@ -13,7 +13,9 @@ package com.thinking.linked.list.medium;
  *   output: 1 -> 3 -> 5 -> 2 -> 4
  * </pre>
  * <p>
- * 思路:
+ * 思路: 先定义两个起始节点，分别表示的是奇节点的起点和偶节点的起点。随后开始遍历整个链表，当整个链表遍历完后，
+ * <p>
+ * 再将奇节点和偶节点连接起来即可
  * <p>
  * 类似题型: Split Linked List in Parts
  *
