@@ -9,9 +9,13 @@ import java.util.Set;
 /**
  * Title: Permutations II
  * <p>
- * 题目：给定一个数组nums，数组nums中有重复的，求这个数组中的全排列
+ * 题目：给定一个数组nums，数组nums中有重复的值，求这个数组中的全排列
  * <p>
- * 思路：
+ * 思路：由于题目中数组nums存在重复的值，所以采用DFS方法时，在统计结果的时候，需要对结果去重
+ * <p>
+ * 我们DFS遍历时，每一层代表是全排列的某个位置上的值，这个值需要从[0,size-1]遍历挑选出来，
+ * <p>
+ * 为避免数组中nums[index]多次使用，构建一个visited集合，记录已经使用过的index。
  * <p>
  * 类似题型：Palindrome Permutation II
  * <p>
@@ -79,7 +83,8 @@ public class Leetcode47 {
 
   public static void main(String[] args) {
     // Output
-    int[] nums = {1, 2, 3};
+//    int[] nums = {1, 2, 3};
+    int[] nums = {1, 1};
 
     Leetcode47 leetcode47 = new Leetcode47();
     ConsoleOutput.printf(leetcode47.permuteUnique(nums));
