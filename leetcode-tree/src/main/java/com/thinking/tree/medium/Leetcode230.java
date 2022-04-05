@@ -8,7 +8,11 @@ import java.util.Deque;
  * <p>
  * 题目: 给定一个平衡二叉树，和一个整数K，求平衡二叉树中第K个节点的值（从小到大顺序）
  * <p>
- * 思路:
+ * 思路: 题目本质是平衡二叉树的中序遍历。构建一个栈，从move=root节点开始遍历，如果当前move节点不空，先入栈
+ * <p>
+ * 然后进入move=move.left。如果move节点为空，则从栈顶弹出一个元素，并做count++计数，当count==k时，则是题目
+ * <p>
+ * 要求的第K个节点的值
  * <p>
  * 类似题型: Binary Tree Inorder Traversal
  * <p>
@@ -23,7 +27,6 @@ public class Leetcode230 {
    */
   public int kthSmallest(TreeNode root, int k) {
     Deque<TreeNode> stack = new ArrayDeque<>();
-    stack.addLast(root);
     int count = 0;
     TreeNode move = root;
     while (move != null || !stack.isEmpty()) {
