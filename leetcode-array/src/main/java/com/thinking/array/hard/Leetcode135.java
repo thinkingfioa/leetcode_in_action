@@ -12,8 +12,16 @@ import com.thinking.common.ConsoleOutput;
  *   第一：每个孩子都有一个糖果
  *   第二：如果速度值比旁边的孩子大，则糖果数也要大一点
  * </pre>
+ * <pre>
+ *   input: 1, 2, 2
+ *   output 4，应发糖果1, 2, 1
+ * </pre>
  * <p>
- * 思路:
+ * 思路: 定义一个数组candyArray[]用于保存每个孩子发的糖果数，每个元素初始化为1。
+ * <p>
+ * 1) 从左往右遍历，如果ratings[i] > ratings[i-1]，那么candyArray[i]=Max(candyArray[i-1]+1, candyArray[i])。
+ * <p>
+ * 该次遍历后，从左往右递增的糖果分配应该符合预期了，但是如果递减的则不行。那么，我们再从右往左遍历一遍
  * <p>
  * 类似题型: K Empty Slots
  * <p>
