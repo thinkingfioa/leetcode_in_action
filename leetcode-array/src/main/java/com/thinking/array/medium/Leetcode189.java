@@ -11,7 +11,11 @@ import com.thinking.common.ConsoleOutput;
  *   output:  [5,6,7,1,2,3,4]
  * </pre>
  * <p>
- * 思路：
+ * 思路：有一个方法，根据给定的非负数k，可以将原数组nums切分成两个子数组[0, len-k)和[len-k, len)
+ * <p>
+ * 第一步：先将两个子数组各自旋转一次
+ * <p>
+ * 第二步：再将两个子数组旋转后组成的数组再循转一次
  * <p>
  * 类似题型：Reverse Words in a String II
  *
