@@ -5,7 +5,7 @@ import com.thinking.common.ConsoleOutput;
 /**
  * Title: Longest Increasing Path in a Matrix
  * <p>
- * 题目:
+ * 题目: 给定一个二维数组matrix，计算出二维数组中最长的递增的路径。每个节点允许通过上下左右来寻找路径
  * <pre>
  *   input:    9   9   4
  *             6   6   8
@@ -13,9 +13,15 @@ import com.thinking.common.ConsoleOutput;
  *   output: 4. 1->2->6->9
  * </pre>
  * <p>
- * 思路:
+ * 思路: 利用DFS算法实现，从某个点matrix[i][j]开始，上下左右的找递增的数组。
  * <p>
- * 类似题型:
+ * 我们可以再用一个二维数组lenPath[][]记录每一个从这个节点开始的最大长度，这样可以有效避免重复计算
+ * <p>
+ * 类似题型: Find the Derangement of An Array
+ * <p>
+ * Loud and Rich
+ * <p>
+ * Minimum Cost For Tickets
  *
  * @author vlin 2022/4/24
  */
