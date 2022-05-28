@@ -27,6 +27,7 @@
     <module>leetcode-dfs</module>
     <module>interview</module>
     <module>interview/redis</module>
+    <module>interview/springboot-demo</module>
   </modules>
 
   <name>leetcode-in-action</name>
