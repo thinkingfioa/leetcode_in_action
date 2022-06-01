@@ -28,29 +28,29 @@ public class MyAspect {
 
   @Before("pointCut()")
   public void before() {
-    System.out.println("-----Before-----");
+    System.out.println("-----Before advice1-----");
   }
 
   @After("pointCut()")
   public void after() {
-    System.out.println("-----After-----");
+    System.out.println("-----After advice1-----");
   }
 
   @AfterReturning("pointCut()")
   public void afterReturning() {
-    System.out.println("-----AfterReturning-----");
+    System.out.println("-----AfterReturning1-----");
   }
 
   @AfterThrowing("pointCut()")
   public void afterThrowing() {
-    System.out.println("-----AfterThrowing-----");
+    System.out.println("-----AfterThrowing1-----");
   }
 
   @Around("pointCut()")
   public void around(ProceedingJoinPoint pjp) throws Throwable {
-    System.out.println("around advise 1");
+    System.out.println("around before advise1");
     //回调目标对象的原有方法
     pjp.proceed();
-    System.out.println("around advise2");
+    System.out.println("around after advise1");
   }
 }

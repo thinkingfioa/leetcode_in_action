@@ -28,12 +28,12 @@ public class MyAspect2 {
 
   @Before("pointCut()")
   public void before() {
-    System.out.println("-----Before2-----");
+    System.out.println("-----Before advice2-----");
   }
 
   @After("pointCut()")
   public void after() {
-    System.out.println("-----After2-----");
+    System.out.println("-----After advice2-----");
   }
 
   @AfterReturning("pointCut()")
@@ -48,9 +48,9 @@ public class MyAspect2 {
 
   @Around("pointCut()")
   public void around(ProceedingJoinPoint pjp) throws Throwable {
-    System.out.println("around advise2 1");
+    System.out.println("around before advise2");
     //回调目标对象的原有方法
     pjp.proceed();
-    System.out.println("around advise2 2");
+    System.out.println("around after advise2");
   }
 }
