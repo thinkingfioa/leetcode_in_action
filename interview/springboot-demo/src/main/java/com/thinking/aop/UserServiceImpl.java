@@ -10,6 +10,7 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public void printUser(User user) {
+    // throw new NullPointerException();
     System.out.println(user.toString());
   }
 }

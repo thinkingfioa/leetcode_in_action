@@ -18,8 +18,8 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
-@Order(1)
-public class MyAspect {
+@Order(2)
+public class MyAspect2 {
 
   //定义切点
   @Pointcut("execution(* com.thinking.aop.UserServiceImpl.printUser(..))")
@@ -28,29 +28,29 @@ public class MyAspect {
 
   @Before("pointCut()")
   public void before() {
-    System.out.println("-----Before-----");
+    System.out.println("-----Before2-----");
   }
 
   @After("pointCut()")
   public void after() {
-    System.out.println("-----After-----");
+    System.out.println("-----After2-----");
   }
 
   @AfterReturning("pointCut()")
   public void afterReturning() {
-    System.out.println("-----AfterReturning-----");
+    System.out.println("-----AfterReturning2-----");
   }
 
   @AfterThrowing("pointCut()")
   public void afterThrowing() {
-    System.out.println("-----AfterThrowing-----");
+    System.out.println("-----AfterThrowing2-----");
   }
 
   @Around("pointCut()")
   public void around(ProceedingJoinPoint pjp) throws Throwable {
-    System.out.println("around advise 1");
+    System.out.println("around advise2 1");
     //回调目标对象的原有方法
     pjp.proceed();
-    System.out.println("around advise2");
+    System.out.println("around advise2 2");
   }
 }
